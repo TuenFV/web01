@@ -23,13 +23,18 @@
     </div>
 
     <div class="mb-3">
-      <%= form.label :stock, style: "display: block" %>
-      <%= form.number_field :stock, class: "form-control"  %>
+      <%= form.label 'Category: ' %>
+      <%= form.collection_select :product_cat, Category.order(:name), :name, :name %>
     </div>
 
     <div class="mb-3">
-      <%= form.label :unit, style: "display: block" %>
-      <%= form.text_field :unit, class: "form-control"  %>
+      <%= form.label :stock, style: "display: block" %>
+      <%= form.range_field :stock, in:  1..100 %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label "Unit: " %>
+      <%= form.select :unit, ["Chiec", "Cai", "Bo", "Doi"] %>
     </div>
 
     <div class="mb-3">
