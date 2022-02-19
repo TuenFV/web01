@@ -6,7 +6,7 @@ ruby "3.0.3"
 gem "rails", "~> 7.0.2", ">= 7.0.2.2"
 
 gem "sprockets-rails"
-gem "sqlite3", "~> 1.4"
+#gem "sqlite3", "~> 1.4"
 gem "puma", "~> 5.0"
 gem "importmap-rails"
 gem "turbo-rails"
@@ -18,7 +18,9 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
+
+gem 'pg'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
