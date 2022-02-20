@@ -8,5 +8,6 @@ window.Stimulus   = application
 
 export { application }
 
-import Rails from "@rails/ujs";
+import Rails from '@rails/ujs';
+
 Rails.start();

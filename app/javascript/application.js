@@ -4,5 +4,5 @@ import "controllers"
 
 import "bootstrap"
 
-import Rails from "@rails/ujs";
-Rails.start();
+//= require jquery
+//= require jquery_ujs

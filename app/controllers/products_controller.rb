@@ -22,6 +22,7 @@ class ProductsController < ApplicationController
   # POST /products or /products.json
   def create
     @product = Product.new(product_params)
+    @product.category_id = cat_id  
 
     respond_to do |format|
       if @product.save
@@ -66,5 +67,9 @@ class ProductsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def product_params
       params.require(:product).permit(:title, :description, :stock, :unit, :price, :product_cat, :category_id)
+    end
+
+    def cat_id
+      cat_id = Category.find_by(name: @product.product_cat).id
     end
 end
