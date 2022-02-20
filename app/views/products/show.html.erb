@@ -23,7 +23,7 @@
                                 <div class="bi-star-fill"></div>
                             </div>
                             <!-- Product price-->
-                            <span class="text-muted text-decoration-line-through"><%= number_to_vnd(@product.price) %></span>              <%= number_to_vnd(@product.price*0.9) %>
+                            <span class="text-muted text-decoration-line-through"><%= number_to_vnd(@product.price) %></span>              <%= @product.price.nil? ? "No Price" :number_to_vnd(@product.price*0.9) %>
                         </div>
                     </div>
                     <!-- Product actions-->
